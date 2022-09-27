@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Jogo da Velha - História</string>
+    <string name="title_escolha_heroi">Escolha o seu Herói</string>
+    <string name="btn_jogar">Playár</string>
+
+    //herois
+    <string name="ayrton">Ayrton Senna</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when</string>
+    <string name="btn_voltar">Voltar</string>
+    <string name="txt_Ranking">Ranking</string>
+
+</resources>
