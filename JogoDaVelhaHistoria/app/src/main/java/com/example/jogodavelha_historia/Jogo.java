@@ -21,7 +21,7 @@ public class Jogo extends AppCompatActivity {
 
 
     private ImageView linha0_coluna0;
-    private EditText edit_linha1_coluna0;
+
     private EditText editText_num_jogador1;
     private EditText editText_num_jogador2;
 
@@ -277,6 +277,20 @@ public class Jogo extends AppCompatActivity {
                 ganhador = p2;
                 mostrarGanhador(2);
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
         contador++;
     }
@@ -286,7 +300,6 @@ public class Jogo extends AppCompatActivity {
             AlertDialog.Builder alertaVencedor = new AlertDialog.Builder(this);
             alertaVencedor.setTitle("VITORIA");
             alertaVencedor.setMessage(player);
-
             alertaVencedor.setPositiveButton("ok", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -327,6 +340,7 @@ public class Jogo extends AppCompatActivity {
         linha0_coluna0 = findViewById(R.id.linha0_coluna0);
         img_p1 = findViewById(R.id.img_p1);
         img_p2 = findViewById(R.id.img_p2);
+
         editText_num_jogador1 = findViewById(R.id.editText_num_jogador1);
         editText_num_jogador2 = findViewById(R.id.editText_num_jogador2);
     }
