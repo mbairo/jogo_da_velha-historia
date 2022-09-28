@@ -21,11 +21,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_ranking"
+        android:id="@+id/btn_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/txt_Ranking"
+        android:text="Check"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -39,54 +39,36 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginEnd="17dp"
         android:src="@drawable/userhide"
+        app:layout_constraintEnd_toStartOf="@+id/btn_check"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ranking" />
+        app:layout_constraintTop_toBottomOf="@+id/text_app_name" />
 
     <ImageView
         android:id="@+id/img_p2"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/userhide"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_ranking" />
+        app:layout_constraintStart_toEndOf="@+id/btn_check"
+        app:layout_constraintTop_toBottomOf="@+id/text_app_name" />
 
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="4dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_p1" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="47dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_p2" />
 
     <View
         android:id="@+id/view_cards"
         android:layout_width="match_parent"
         android:layout_height="377dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/black"
+
+        android:layout_marginTop="81dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/editText_num_jogador1" />
 
     <!-- cards -->
     <!-- Linha 0 -->
@@ -183,6 +165,43 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_num_jogador1"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="Digite aqui..."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_p1" />
+
+
+    <EditText
+        android:id="@+id/editText_num_jogador2"
+        android:layout_width="148dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Digite aqui..."
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_p2" />
+
+
+    <EditText
+        android:id="@+id/edit_linha1_coluna0"
+        android:layout_width="120dp"
+        android:layout_height="115dp"
+        android:ems="10"
+        android:hint="Digite aqui..."
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/linha0_coluna0"
+        app:layout_constraintEnd_toEndOf="@+id/linha0_coluna0"
+        app:layout_constraintStart_toStartOf="@+id/linha0_coluna0"
+        app:layout_constraintTop_toTopOf="@+id/linha0_coluna0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

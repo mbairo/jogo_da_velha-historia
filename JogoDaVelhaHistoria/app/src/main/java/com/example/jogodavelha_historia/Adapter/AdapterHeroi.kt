@@ -13,6 +13,7 @@ import com.example.jogodavelha_historia.model.Heroi
 // Construtor
 class AdapterHeroi (private  val context : Context, private val herois : MutableList<Heroi>): RecyclerView.Adapter<AdapterHeroi.HeroiViewHolder>() {
 
+
     // onCreateViewHolder cria a parte visual do card
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroiViewHolder {
         val itemLista = LayoutInflater.from(context).inflate(R.layout.card_heroi,parent, false)
