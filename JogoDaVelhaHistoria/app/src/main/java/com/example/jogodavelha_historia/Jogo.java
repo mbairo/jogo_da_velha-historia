@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,16 +17,11 @@ public class Jogo extends AppCompatActivity {
     private Button btn_check;
     private ImageView img_p1;
     private ImageView img_p2;
-    private ImageView img_p1_x;
-    private ImageView img_p2_o;
-
 
     private ImageView linha0_coluna0;
 
     private EditText editText_num_jogador1;
     private EditText editText_num_jogador2;
-
-
 
 
     private int matriz [][] = new int[3][3];
@@ -34,15 +30,11 @@ public class Jogo extends AppCompatActivity {
     private String p1;
     private String p2;
 
-    private ImageView imageView_p1;
-    private ImageView imageView_p2;
 
     private int player;
     private  int contador;
 
     private boolean empate;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,17 +45,6 @@ public class Jogo extends AppCompatActivity {
         contador = 1;
         player = 1;
         empate = true;
-
-        vetorImageView[0] = findViewById(R.id.linha0_coluna0);
-        vetorImageView[1] = findViewById(R.id.linha0_coluna1);
-        vetorImageView[2] = findViewById(R.id.linha0_coluna2);
-        vetorImageView[3] = findViewById(R.id.linha1_coluna0);
-        vetorImageView[4] = findViewById(R.id.linha1_coluna1);
-        vetorImageView[5] = findViewById(R.id.linha1_coluna2);
-        vetorImageView[6] = findViewById(R.id.linha2_coluna0);
-        vetorImageView[7] = findViewById(R.id.linha2_coluna1);
-        vetorImageView[8] = findViewById(R.id.linha2_coluna2);
-
 
         vetorImageView[0].setOnClickListener(new View.OnClickListener() {
             @Override
@@ -192,120 +173,115 @@ public class Jogo extends AppCompatActivity {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.ayrtonsenna);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Ayrton Senna";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("2")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.dompedro2);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Dom Pedro II";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("3")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.ruibarbosa);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Rui Barbosa";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("4")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.santosdumont);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Santos Dumont";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("5")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.tiradentes);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Tiradentes";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("6")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.josebonifacio);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "José Bonifácio";
+                verificarSeGanhou(1);
             } else if (heroiEscolhidoP1.equals("7")) {
                 matriz[linhaX][colunaY] = 1;
                 campo.setImageResource(R.drawable.chapolin);
                 player = 2;
-                ganhador = p1;
-                mostrarGanhador(1);
+                ganhador = "Chapolin";
+                verificarSeGanhou(1);
             }
 
 
         } else {
-            if (heroiEscolhidoP2.equals("2")){
+            if (heroiEscolhidoP2.equals("1")){
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.ayrtonsenna);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Ayrton Senna";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("2")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.dompedro2);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Dom Pedro II";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("3")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.ruibarbosa);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Rui Barbosa";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("4")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.santosdumont);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Santos Dumont";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("5")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.tiradentes);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Tiradentes";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("6")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.josebonifacio);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "José Bonifácio";
+                verificarSeGanhou(2);
             } else if (heroiEscolhidoP2.equals("7")) {
                 matriz[linhaX][colunaY] = 2;
                 campo.setImageResource(R.drawable.chapolin);
                 player = 1;
-                ganhador = p2;
-                mostrarGanhador(2);
+                ganhador = "Chapolin";
+                verificarSeGanhou(2);
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
         contador++;
     }
 
-    public void mostrarGanhador(int x) {
-        if (fimDeJogo(x) == true && empate == false) {
+    public void verificarSeGanhou(int heroiDoPlayer) {
+        if (fimDeJogo(heroiDoPlayer) == true && empate == false) {
             AlertDialog.Builder alertaVencedor = new AlertDialog.Builder(this);
             alertaVencedor.setTitle("VITORIA");
-            alertaVencedor.setMessage(player);
-            alertaVencedor.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            alertaVencedor.setMessage(ganhador + " Ganhou!");
+            alertaVencedor.setCancelable(false);
+
+            alertaVencedor.setPositiveButton("História", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    // todo
+                    Toast.makeText(getApplicationContext(), "Aqui vai a história...", Toast.LENGTH_LONG).show();
                 }
             });
+            alertaVencedor.setPositiveButton("Menu Inicial", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Toast.makeText(getApplicationContext(), "Entiti para o inicio...", Toast.LENGTH_LONG).show();
+                }
+            });
+
             alertaVencedor.create();
             alertaVencedor.show();
         }
@@ -333,7 +309,7 @@ public class Jogo extends AppCompatActivity {
         return false;
     }
 
-    // Metodos
+    // Métodos
     private void BuscarElementos () {
         btn_voltar = findViewById(R.id.btn_voltar);
         btn_check = findViewById(R.id.btn_check);
@@ -343,6 +319,17 @@ public class Jogo extends AppCompatActivity {
 
         editText_num_jogador1 = findViewById(R.id.editText_num_jogador1);
         editText_num_jogador2 = findViewById(R.id.editText_num_jogador2);
+
+        vetorImageView[0] = findViewById(R.id.linha0_coluna0);
+        vetorImageView[1] = findViewById(R.id.linha0_coluna1);
+        vetorImageView[2] = findViewById(R.id.linha0_coluna2);
+        vetorImageView[3] = findViewById(R.id.linha1_coluna0);
+        vetorImageView[4] = findViewById(R.id.linha1_coluna1);
+        vetorImageView[5] = findViewById(R.id.linha1_coluna2);
+        vetorImageView[6] = findViewById(R.id.linha2_coluna0);
+        vetorImageView[7] = findViewById(R.id.linha2_coluna1);
+        vetorImageView[8] = findViewById(R.id.linha2_coluna2);
+
     }
 
 
