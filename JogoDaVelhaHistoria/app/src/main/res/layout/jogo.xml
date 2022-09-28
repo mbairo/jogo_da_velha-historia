@@ -56,6 +56,28 @@
         app:layout_constraintStart_toEndOf="@+id/btn_check"
         app:layout_constraintTop_toBottomOf="@+id/text_app_name" />
 
+        <EditText
+            android:id="@+id/editText_num_jogador1"
+            android:layout_width="146dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="Digite aqui..."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_p1" />
+
+        <EditText
+            android:id="@+id/editText_num_jogador2"
+            android:layout_width="148dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="Digite aqui..."
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_p2" />
+
 
     <View
         android:id="@+id/view_cards"
@@ -64,7 +86,6 @@
         android:layout_margin="10dp"
 
         android:layout_marginTop="81dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_voltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -165,30 +186,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editText_num_jogador1"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:hint="Digite aqui..."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_p1" />
-
-
-    <EditText
-        android:id="@+id/editText_num_jogador2"
-        android:layout_width="148dp"
-        android:layout_height="47dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:hint="Digite aqui..."
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_p2" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

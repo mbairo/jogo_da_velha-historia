@@ -2,6 +2,7 @@
     <string name="app_name">Jogo da Velha - História</string>
     <string name="title_escolha_heroi">Escolha o seu Herói</string>
     <string name="btn_jogar">Playár</string>
+    <string name="splashScreen">Jogo da Velha  História</string>
 
     //herois
     <string name="ayrton">Ayrton Senna</string>
@@ -9,4 +10,16 @@
     <string name="btn_voltar">Voltar</string>
     <string name="txt_Ranking">Ranking</string>
 
+    <string name="text1_ayrton_senna">Ayrton Senna da Silva \n (São Paulo, 21 de março de 1960 — Bolonha, 1 de maio de 1994) piloto brasileiro de Fórmula 1...</string>
+
+    <string name="text2_ayrton_senna">"Deus é Grande Deus e forte, quando ele quer não tem quem não queira"</string>
+    <string name="text3_ayrton_senna">"Uma maneira de preservar sua própria imagem é não deixar que o mundo invada sua casa. Foi um modo que encontrei de preservar ao máximo meus valores"</string>
+    <string name="text4_ayrton_senna">"O segundo nada mais é do que o primeiro dos perdedores"</string>
+    <string name="text5_ayrton_senna">"Eu não tenho ídolos. Tenho admiração por trabalho, dedicação e competência"</string>
+
+    <string name="text_chapolin"> "Eu! O Chapolin Colorado!"\nÉ um herói atrapalhado, medroso e desastrado, que sempre aparece quando alguém precisa. Com sua marreta biônica e a pílula encolhedora, ele, muitas vezes, provoca mais confusão do que necessariamente ajuda.</string>
+    <string name="text1_chapolin">"Não contavam com minha astúcia!"</string>
+    <string name="text2_chapolin">"Palma, palma, não priemos cânico!"</string>
+
 </resources>
+
