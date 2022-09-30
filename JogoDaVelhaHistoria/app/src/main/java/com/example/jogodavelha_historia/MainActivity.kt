@@ -1,14 +1,18 @@
 package com.example.jogodavelha_historia
-
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.View.OnLongClickListener
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jogodavelha_historia.Adapter.AdapterHeroi
 import com.example.jogodavelha_historia.model.Heroi
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         recyclerViewHerois.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         // ganho de desempenho - Nao obrigatorio
         recyclerViewHerois.setHasFixedSize(true)
+
         // Configurar o adapter
         val listaDeHerois : MutableList<Heroi> = mutableListOf()
         val adapterHeroi = AdapterHeroi (this, listaDeHerois)
@@ -85,5 +90,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this@MainActivity, Jogo::class.java))
         }
 
+        btn_playar.setOnLongClickListener(OnLongClickListener {
+
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Parabéns!")
+            builder.setMessage("Você desbloqueou um Easter Egg ao pressionar por 1406ms o botão Playár que é uma referência a música 1406 do Mamonas Assassinas \n")
+
+            builder.setPositiveButton("Ver o show/música") { dialog, which ->
+                Toast.makeText(applicationContext,
+                    android.R.string.yes, Toast.LENGTH_SHORT).show()
+                val url = "https://www.youtube.com/watch?v=sSdEqQ_wJOo"
+                val i = Intent(Intent.ACTION_VIEW)
+                i.data = Uri.parse(url)
+                startActivity(i)
+            }
+
+            builder.setNegativeButton("Não gosto de música boa") { dialog, which ->
+                Toast.makeText(applicationContext,
+                    android.R.string.no, Toast.LENGTH_SHORT).show()
+            }
+
+            builder.show()
+
+            true
+        })
     }
 }
